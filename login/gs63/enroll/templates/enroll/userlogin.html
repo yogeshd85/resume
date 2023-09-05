@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+</head>
+<body>
+<form action="" method="post" novalidate>
+    {% csrf_token%}
+     {% for fm in form %}
+       {{fm.label_tag}} {{fm}} {{fm.errors|striptags}} <br><br>
+    {%endfor%}
+    <input type="button" value="Login">
+</form>
+<a href="{% url 'sign_up' %} ">Signup</a>
+
+</body>
+</html>
